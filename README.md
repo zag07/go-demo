@@ -5,9 +5,6 @@
 
 ```text
 .
-├── analysis
-│   └── gin
-│
 ├── golang
 │   └── context
 │
@@ -15,14 +12,11 @@
 │   ├── tcp
 │   └── websocket
 │
+├── toys
+│   └── web
+│
 ├── ...
 ```
-
-## analysis
-
-### gin
-[Gee](https://geektutu.com/post/gee.html) is a [gin](https://github.com/gin-gonic/gin)-like framework
-
 
 ## golang
 
@@ -33,3 +27,9 @@ this is from [gopl.io](https://github.com/adonovan/gopl.io/blob/HEAD/ch8/netcat3
 
 ### websocket
 this is from [gorilla/websocket](https://github.com/gorilla/websocket/tree/master/examples/chat)
+
+## toys
+
+### gin
+[web](https://geektutu.com/post/gee.html) is a [gin](https://github.com/gin-gonic/gin)-like framework
+

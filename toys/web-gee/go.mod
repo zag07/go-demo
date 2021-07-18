@@ -1,4 +1,4 @@
-module github.com/zs368/go-demo/analysis/web
+module github.com/zs368/go-demo/toys/web-gee
 
 go 1.16
 
