@@ -9,11 +9,13 @@
 │   └── context
 │
 ├── services
+│   ├── rpc
 │   ├── tcp
 │   └── websocket
 │
 ├── toys
-│   └── web
+│   ├── rpc-gee
+│   └── web-gee
 │
 ├── ...
 ```
@@ -21,6 +23,9 @@
 ## golang
 
 ## services
+
+### rpc
+this is from [advanced-go-programming-book](https://chai2010.cn/advanced-go-programming-book/ch4-rpc/readme.html)
 
 ### tcp
 this is from [gopl.io](https://github.com/adonovan/gopl.io/blob/HEAD/ch8/netcat3/netcat.go)
@@ -39,3 +44,7 @@ this is from [7days-golang](https://github.com/geektutu/7days-golang)
 this is from [7days-golang](https://github.com/geektutu/7days-golang)
 
 [GeeRPC](https://geektutu.com/post/geerpc.html) is a [net/rpc](https://github.com/golang/go/tree/master/src/net/rpc)-like RPC framework
+
+### rpc-chai
+this is from [advanced-go-programming-book](https://chai2010.cn/advanced-go-programming-book/ch4-rpc/readme.html)
+
