@@ -1,4 +1,4 @@
-module github.com/zs368/go-demo/toys/rpc-chai
+module github.com/zs368/go-demo/gRpc
 
 go 1.16
 
