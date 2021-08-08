@@ -1,4 +1,4 @@
-module github.com/zs368/go-demo/services/websocket
+module github.com/zs368/go-demo/websocket
 
 go 1.16
 
