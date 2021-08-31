@@ -4,10 +4,14 @@
 
 A simple, fast, and fun package for building command line apps in Go Topics
 
-
 ## gRpc
 
 this is from [advanced-go-programming-book](https://chai2010.cn/advanced-go-programming-book/ch4-rpc/readme.html)
+
+## [jwt](https://github.com/golang-jwt/jwt)
+
+A [go](http://www.golang.org) (or 'golang' for search engine friendliness) implementation
+of [JSON Web Tokens](https://datatracker.ietf.org/doc/html/rfc7519).
 
 ## rpc
 
@@ -17,10 +21,9 @@ this is from [advanced-go-programming-book](https://chai2010.cn/advanced-go-prog
 
 this is from [gopl.io](https://github.com/adonovan/gopl.io/blob/HEAD/ch8/netcat3/netcat.go)
 
-## websocket
+## [websocket](https://github.com/gorilla/websocket)
 
 this is from [gorilla/websocket](https://github.com/gorilla/websocket/tree/master/examples/chat)
-
 
 ## [wire](https://github.com/google/wire)
 
