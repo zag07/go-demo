@@ -1,4 +1,4 @@
-module github.com/zs368/go-demo/cliApp
+module go-demo/cliApp
 
 go 1.16
 

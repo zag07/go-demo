@@ -1,4 +1,4 @@
-module github.com/zs368/go-demo/wire
+module go-demo/wire
 
 go 1.16
 

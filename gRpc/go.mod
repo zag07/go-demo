@@ -1,4 +1,4 @@
-module github.com/zs368/go-demo/gRpc
+module go-demo/gRpc
 
 go 1.16
 

@@ -1,4 +1,4 @@
-module github.com/zs368/go-demo/jwt
+module go-demo/jwt
 
 go 1.17
 
