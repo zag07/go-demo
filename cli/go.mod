@@ -1,4 +1,4 @@
-module go-demo/cliApp
+module go-demo/cli
 
 go 1.16
 
