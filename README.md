@@ -1,5 +1,9 @@
 # GO DEMO
 
+## [bloom](https://github.com/bits-and-blooms/bloom)
+
+Go package implementing Bloom filters
+
 ## [cli](https://github.com/urfave/cli)
 
 A simple, fast, and fun package for building command line apps in Go Topics
