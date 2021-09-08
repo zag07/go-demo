@@ -25,6 +25,10 @@ this is from [advanced-go-programming-book](https://chai2010.cn/advanced-go-prog
 A [go](http://www.golang.org) (or 'golang' for search engine friendliness) implementation
 of [JSON Web Tokens](https://datatracker.ietf.org/doc/html/rfc7519).
 
+## [roaring](https://github.com/RoaringBitmap/roaring)
+
+Roaring bitmaps in Go (golang)
+
 ## rpc
 
 this is from [advanced-go-programming-book](https://chai2010.cn/advanced-go-programming-book/ch4-rpc/readme.html)
