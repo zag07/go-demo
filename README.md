@@ -1,5 +1,9 @@
 # GO DEMO
 
+## [bitset](https://github.com/bits-and-blooms/bitset)
+
+Go package implementing bitsets
+
 ## [bloom](https://github.com/bits-and-blooms/bloom)
 
 Go package implementing Bloom filters
