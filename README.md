@@ -25,6 +25,11 @@ this is from [advanced-go-programming-book](https://chai2010.cn/advanced-go-prog
 A [go](http://www.golang.org) (or 'golang' for search engine friendliness) implementation
 of [JSON Web Tokens](https://datatracker.ietf.org/doc/html/rfc7519).
 
+## [kafka](https://pkg.go.dev/github.com/Shopify/sarama#pkg-examples)
+
+[Sarama](https://github.com/Shopify/sarama) is a Go library for Apache Kafka 0.8, and up.
+
+
 ## [roaring](https://github.com/RoaringBitmap/roaring)
 
 Roaring bitmaps in Go (golang)
