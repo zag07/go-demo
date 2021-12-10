@@ -1,4 +1,4 @@
-package async_producer
+package main
 
 import (
 	"log"
@@ -15,7 +15,7 @@ func main() {
 
 func ByGoroutines() {
 	config := sarama.NewConfig()
-	config.Version = sarama.V2_8_1_0
+	config.Version = sarama.V3_0_0_0
 	config.Producer.Return.Successes = true
 
 	producer, err := sarama.NewAsyncProducer([]string{"localhost:9093"}, config)

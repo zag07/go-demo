@@ -21,7 +21,7 @@ func (h exampleConsumerGroupHandler) ConsumeClaim(sess sarama.ConsumerGroupSessi
 
 func main() {
 	config := sarama.NewConfig()
-	config.Version = sarama.V2_8_1_0
+	config.Version = sarama.V3_0_0_0
 	config.Consumer.Return.Errors = true
 
 	group, err := sarama.NewConsumerGroup([]string{"localhost:9093"}, "my-group", config)

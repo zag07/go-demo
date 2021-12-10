@@ -10,7 +10,7 @@ import (
 
 func main() {
 	config := sarama.NewConfig()
-	config.Version = sarama.V2_8_1_0
+	config.Version = sarama.V3_0_0_0
 
 	consumer, err := sarama.NewConsumer([]string{"127.0.0.1:9093"}, config)
 	if err != nil {
