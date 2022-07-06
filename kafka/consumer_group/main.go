@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-
 	"github.com/Shopify/sarama"
+	"time"
 )
 
 type exampleConsumerGroupHandler struct{}
@@ -15,13 +15,15 @@ func (h exampleConsumerGroupHandler) ConsumeClaim(sess sarama.ConsumerGroupSessi
 	for msg := range claim.Messages() {
 		fmt.Printf("Message topic:%q partition:%d offset:%d\n", msg.Topic, msg.Partition, msg.Offset)
 		sess.MarkMessage(msg, "")
+		fmt.Println("Consumed +++")
+		time.Sleep(time.Second)
 	}
 	return nil
 }
 
 func main() {
 	config := sarama.NewConfig()
-	config.Version = sarama.V3_0_0_0
+	config.Version = sarama.V3_1_0_0
 	config.Consumer.Return.Errors = true
 
 	group, err := sarama.NewConsumerGroup([]string{"localhost:9093"}, "my-group", config)
@@ -40,7 +42,7 @@ func main() {
 	// Iterate over consumer sessions.
 	ctx := context.Background()
 	for {
-		topics := []string{"my-topic"}
+		topics := []string{"my_topic", "myTopic"}
 		handler := exampleConsumerGroupHandler{}
 
 		// `Consume` should be called inside an infinite loop, when a

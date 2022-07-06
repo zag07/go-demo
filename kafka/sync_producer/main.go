@@ -7,7 +7,11 @@ import (
 )
 
 func main() {
-	producer, err := sarama.NewSyncProducer([]string{"localhost:9093"}, nil)
+	config := sarama.NewConfig()
+	config.Version = sarama.V2_8_0_0
+	config.Producer.Return.Successes = true
+
+	producer, err := sarama.NewSyncProducer([]string{"127.0.0.1:9093"}, config)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -17,7 +21,7 @@ func main() {
 		}
 	}()
 
-	msg := &sarama.ProducerMessage{Topic: "my_topic", Value: sarama.StringEncoder("testing 123")}
+	msg := &sarama.ProducerMessage{Topic: "bkc_zag001", Value: sarama.StringEncoder("testing 111")}
 	partition, offset, err := producer.SendMessage(msg)
 	if err != nil {
 		log.Printf("FAILED to send message: %s\n", err)

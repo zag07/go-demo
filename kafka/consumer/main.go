@@ -4,13 +4,14 @@ import (
 	"log"
 	"os"
 	"os/signal"
+	"time"
 
 	"github.com/Shopify/sarama"
 )
 
 func main() {
 	config := sarama.NewConfig()
-	config.Version = sarama.V3_0_0_0
+	config.Version = sarama.V3_1_0_0
 
 	consumer, err := sarama.NewConsumer([]string{"127.0.0.1:9093"}, config)
 	if err != nil {
@@ -44,10 +45,12 @@ ConsumerLoop:
 		select {
 		case msg := <-partitionConsumer.Messages():
 			log.Printf("Consumed message offset %d\n", msg.Offset)
+			log.Printf(string(msg.Value))
 			consumed++
 		case <-signals:
 			break ConsumerLoop
 		}
+		time.Sleep(time.Second)
 	}
 
 	log.Printf("Consumed: %d\n", consumed)

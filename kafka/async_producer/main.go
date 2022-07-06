@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 	"os/signal"
+	"strconv"
 	"sync"
 
 	"github.com/Shopify/sarama"
@@ -15,7 +16,7 @@ func main() {
 
 func ByGoroutines() {
 	config := sarama.NewConfig()
-	config.Version = sarama.V3_0_0_0
+	config.Version = sarama.V2_8_0_0
 	config.Producer.Return.Successes = true
 
 	producer, err := sarama.NewAsyncProducer([]string{"localhost:9093"}, config)
@@ -50,8 +51,9 @@ func ByGoroutines() {
 	}()
 
 ProducerLoop:
-	for {
-		message := &sarama.ProducerMessage{Topic: "my_topic", Value: sarama.StringEncoder("testing 123")}
+	for i := 0; i < 10; i++ {
+		val := "zag13 testing " + strconv.Itoa(i)
+		message := &sarama.ProducerMessage{Topic: "Shakespeare", Value: sarama.StringEncoder(val)}
 		select {
 		case producer.Input() <- message:
 			enqueued++
@@ -85,9 +87,10 @@ func BySelect() {
 
 	var enqueued, producerErrors int
 ProducerLoop:
-	for {
+	for i := 0; i < 10; i++ {
+		msg := "testing" + string(i)
 		select {
-		case producer.Input() <- &sarama.ProducerMessage{Topic: "my_topic", Key: nil, Value: sarama.StringEncoder("testing 123")}:
+		case producer.Input() <- &sarama.ProducerMessage{Topic: "Shakespeare", Key: nil, Value: sarama.StringEncoder(msg)}:
 			enqueued++
 		case err := <-producer.Errors():
 			log.Println("Failed to produce message", err)
